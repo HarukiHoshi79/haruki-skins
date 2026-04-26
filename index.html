@@ -11,9 +11,10 @@
       font-family: Arial, sans-serif;
       background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #ffffff;
+      color: #fff;
     }
 
+    /* overlay escuro */
     body::before {
       content: "";
       position: fixed;
@@ -21,29 +22,56 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
       z-index: -1;
     }
 
-    header {
-      background: rgba(28, 28, 28, 0.85);
-      padding: 20px;
+    /* ===== HEADER AESTHETIC ===== */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 70px 20px;
       text-align: center;
-      border-bottom: 2px solid #2ecc71;
-      backdrop-filter: blur(5px);
     }
 
-    header h1 {
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px 30px;
+      max-width: 500px;
+    }
+
+    .glass h1 {
       margin: 0;
-      font-size: 28px;
-      color: #2ecc71;
+      font-size: 38px;
+      letter-spacing: 2px;
+      color: #ffffff;
     }
 
-    header p {
-      margin: 5px 0 0;
-      color: #ccc;
+    .glass p {
+      margin-top: 10px;
+      color: #d1d1d1;
+      font-size: 14px;
     }
 
+    .line {
+      width: 60px;
+      height: 2px;
+      background: #2ecc71;
+      margin: 15px auto;
+      border-radius: 5px;
+    }
+
+    .small {
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    /* ===== GRID ===== */
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -57,12 +85,11 @@
     }
 
     .card {
-      background: rgba(27, 27, 27, 0.9);
+      background: rgba(27, 27, 27, 0.85);
       border-radius: 12px;
       overflow: hidden;
       transition: 0.3s;
       border: 1px solid #2a2a2a;
-      backdrop-filter: blur(4px);
       text-align: center;
       padding-bottom: 15px;
     }
@@ -75,13 +102,11 @@
     .card img {
       width: 100%;
       display: block;
-      cursor: pointer;
     }
 
     .card h3 {
       margin: 10px;
       font-size: 16px;
-      color: #fff;
     }
 
     .btn {
@@ -107,11 +132,17 @@
 
 <body>
 
-  <header>
-    <h1>Palette Skins by Haruki</h1>
-    <p>Clique na skin para comprar</p>
+  <!-- HEADER AESTHETIC -->
+  <header class="hero">
+    <div class="glass">
+      <h1>Palette Skins</h1>
+      <p>by Haruki • aesthetic minecraft skins</p>
+      <div class="line"></div>
+      <p class="small">click on a skin to buy</p>
+    </div>
   </header>
 
+  <!-- SKINS -->
   <div class="container">
     <div class="grid">
 
@@ -128,14 +159,14 @@
           <img src="minhaskin2.png" alt="Skin 2">
         </a>
         <h3>Skin 2</h3>
-        <a class="btn" href="SEU_LINK_DE_PAGAMENTO_2" target="_blank">Comprar</a>
+        <a class="btn" href="https://ko-fi.com/harukihoshi#" target="_blank">Comprar</a>
       </div>
 
     </div>
   </div>
 
   <footer>
-    © 2026 Haruki Hoshi - Feito com GitHub Pages
+    © 2026 Palette Skins by Haruki
   </footer>
 
 </body>
