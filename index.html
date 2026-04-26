@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Palette Skins by Haruki</title>
+
   <style>
     body {
       margin: 0;
@@ -11,7 +12,6 @@
       background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
       background-size: cover;
       color: #ffffff;
-      position: relative;
     }
 
     body::before {
@@ -23,18 +23,14 @@
       height: 100%;
       background: rgba(0,0,0,0.6);
       z-index: -1;
-    
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
     }
 
     header {
-      background: #1c1c1c;
+      background: rgba(28, 28, 28, 0.85);
       padding: 20px;
       text-align: center;
       border-bottom: 2px solid #2ecc71;
+      backdrop-filter: blur(5px);
     }
 
     header h1 {
@@ -45,7 +41,7 @@
 
     header p {
       margin: 5px 0 0;
-      color: #aaa;
+      color: #ccc;
     }
 
     .container {
@@ -61,11 +57,14 @@
     }
 
     .card {
-      background: #1b1b1b;
+      background: rgba(27, 27, 27, 0.9);
       border-radius: 12px;
       overflow: hidden;
       transition: 0.3s;
       border: 1px solid #2a2a2a;
+      backdrop-filter: blur(4px);
+      text-align: center;
+      padding-bottom: 15px;
     }
 
     .card:hover {
@@ -76,25 +75,18 @@
     .card img {
       width: 100%;
       display: block;
+      cursor: pointer;
     }
 
     .card h3 {
       margin: 10px;
       font-size: 16px;
-      text-align: center;
       color: #fff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 12px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 5px;
       padding: 8px 12px;
       background: #2ecc71;
       color: black;
@@ -103,32 +95,40 @@
       font-weight: bold;
       font-size: 13px;
     }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      font-size: 12px;
+    }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>Palette Skins by Haruki</h1>
-    <p>Sua coleção de skins de Minecraft</p>
+    <p>Clique na skin para comprar</p>
   </header>
 
   <div class="container">
     <div class="grid">
 
-      <!-- EXEMPLO DE SKIN -->
       <div class="card">
-        <img src="images/skin1.png" alt="Skin 1">
+        <a href="SEU_LINK_DE_PAGAMENTO_1" target="_blank">
+          <img src="minhaskin.png" alt="Skin 1">
+        </a>
         <h3>Skin 1</h3>
+        <a class="btn" href="SEU_LINK_DE_PAGAMENTO_1" target="_blank">Comprar</a>
       </div>
 
       <div class="card">
-        <img src="images/skin2.png" alt="Skin 2">
+        <a href="SEU_LINK_DE_PAGAMENTO_2" target="_blank">
+          <img src="minhaskin2.png" alt="Skin 2">
+        </a>
         <h3>Skin 2</h3>
-      </div>
-
-      <div class="card">
-        <img src="images/skin3.png" alt="Skin 3">
-        <h3>Skin 3</h3>
+        <a class="btn" href="SEU_LINK_DE_PAGAMENTO_2" target="_blank">Comprar</a>
       </div>
 
     </div>
